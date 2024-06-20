@@ -1,7 +1,7 @@
 module.exports = {
-  extends: ["expo", "prettier"],
-  plugins: ["prettier"],
+  extends: ['expo', 'prettier'],
+  plugins: ['prettier'],
   rules: {
-    "quotes": [2, "double", { "avoidEscape": true }]
+    quotes: [2, 'single', { avoidEscape: true }],
   },
 };
