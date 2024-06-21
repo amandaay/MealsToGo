@@ -8,8 +8,8 @@ Mobile Application using React Native
 2. npx expo start
 
 #### Citation
-https://docs.expo.dev/
-https://github.com/software-mansion/react-native-svg/blob/main/USAGE.md
-https://github.com/expo/google-fonts
-https://docs.expo.dev/guides/using-eslint/
-https://github.com/mobinni/MealsToGo/tree/master
+https://docs.expo.dev/ <br>
+https://github.com/software-mansion/react-native-svg/blob/main/USAGE.md <br>
+https://github.com/expo/google-fonts <br>
+https://docs.expo.dev/guides/using-eslint/ <br>
+https://github.com/mobinni/MealsToGo/tree/master <br>
