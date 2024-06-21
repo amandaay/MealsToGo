@@ -13,3 +13,4 @@ https://github.com/software-mansion/react-native-svg/blob/main/USAGE.md <br>
 https://github.com/expo/google-fonts <br>
 https://docs.expo.dev/guides/using-eslint/ <br>
 https://github.com/mobinni/MealsToGo/tree/master <br>
+https://reactnavigation.org/docs/getting-started/ <br>
