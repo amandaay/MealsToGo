@@ -16,6 +16,19 @@ import { Ionicons } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
 
+const TAB_ICON = {
+  Restaurants: 'restaurant',
+  Map: 'map',
+  Settings: 'settings',
+};
+
+const createScreenOptions = ({ route }) => ({
+  tabBarIcon: ({ focused, color, size }) => {
+    const iconName = TAB_ICON[route.name];
+    return <Ionicons name={focused ? `${iconName}` : `${iconName}-outline`} size={size} color={color} />;
+  },
+});
+
 const Settings = () => (
   <SafeArea>
     <Text>Settings</Text>
@@ -46,23 +59,11 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <NavigationContainer>
           <Tab.Navigator
-            screenOptions={({ route }) => ({
-              tabBarIcon: ({ focused, color, size }) => {
-                let iconName;
-
-                if (route.name === 'Restaurants') {
-                  iconName = focused ? 'restaurant' : 'restaurant-outline';
-                } else if (route.name === 'Settings') {
-                  iconName = focused ? 'settings' : 'settings-outline';
-                } else if (route.name === 'Map') {
-                  iconName = focused ? 'map' : 'map-outline';
-                }
-                // You can return any component that you like here!
-                return <Ionicons name={iconName} size={size} color={color} />;
-              },
-              tabBarActiveTintColor: 'tomato',
-              tabBarInactiveTintColor: 'gray',
-            })}
+            screenOptions={createScreenOptions}
+            tabBarOptions={{
+              activeTintColor: 'tomato',
+              inactiveTintColor: 'gray',
+            }}
           >
             <Tab.Screen name="Restaurants" component={RestaurantsScreen} />
             <Tab.Screen name="Map" component={Map} />
